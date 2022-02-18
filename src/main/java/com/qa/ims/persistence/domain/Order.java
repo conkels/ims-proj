@@ -33,6 +33,11 @@ public class Order {
 		this.qty = qty;
 	}
 
+// create a new constructor to implement addItem method
+	public Order(Long orderId, Long itemId) {
+		this.orderId = orderId;
+		this.itemId = itemId;
+	}
 
 	public Long getOrderId() {
 		return orderId;

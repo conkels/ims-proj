@@ -122,6 +122,18 @@ public static final Logger LOGGER = LogManager.getLogger();
 		}
 		return 0;
 	}
+	
+	public int deleteItem(long order_id) {
+		try (Connection connection = DBUtils.getInstance().getConnection();
+				Statement statement = connection.createStatement();) {
+			statement.executeUpdate("delete from `orders_items` where order_id = " + order_id);
+			return statement.executeUpdate("delete from `orders` where order_id = " + order_id);
+		} catch (Exception e) {
+			LOGGER.debug(e);
+			LOGGER.error(e.getMessage());
+		}
+		return 0;
+	}
 	// creating an add item functionality to order
 //	public Order addItem(Order order) {
 //		try (Connection connection = DBUtils.getInstance().getConnection();
