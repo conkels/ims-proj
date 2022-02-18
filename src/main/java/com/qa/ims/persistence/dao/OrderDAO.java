@@ -97,10 +97,10 @@ public static final Logger LOGGER = LogManager.getLogger();
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
 						.prepareStatement("UPDATE orders SET id = ?, qty = ?, item_id = ? WHERE order_id = ?");) {
-			statement.setLong(1, order.getCustId());
+			statement.setLong(1, order.getItemId());
 			statement.setLong(2, order.getQty());
-			statement.setLong(3, order.getItemId());
-			statement.setLong(4, order.getOrderId());
+			statement.setLong(3, order.getOrderId());
+			statement.setLong(4, order.getCustId());
 			statement.executeUpdate();
 			return read(order.getOrderId());
 		} catch (Exception e) {
@@ -126,8 +126,7 @@ public static final Logger LOGGER = LogManager.getLogger();
 	public int deleteItem(long order_id) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from `orders_items` where order_id = " + order_id);
-			return statement.executeUpdate("delete from `orders` where order_id = " + order_id);
+			return statement.executeUpdate("DELETE FROM `orders_items` WHERE order_id = " + order_id);
 		} catch (Exception e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());
