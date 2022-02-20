@@ -58,9 +58,9 @@ public class OrderControllerTest {
 	
 	@Test
 	public void testUpdate() {
-		Order updated = new Order(1L, 1L, 1L, 2L);
+		Order updated = new Order(1L, 1L, 2L, 1L);
 
-		Mockito.when(this.utils.getLong()).thenReturn(updated.getOrderId(), updated.getCustId(), updated.getItemId(), updated.getQty());
+		Mockito.when(this.utils.getLong()).thenReturn(updated.getOrderId(), updated.getItemId(), updated.getQty(), updated.getCustId());
 		Mockito.when(this.dao.update(updated)).thenReturn(updated);
 
 		assertEquals(updated, this.controller.update());
