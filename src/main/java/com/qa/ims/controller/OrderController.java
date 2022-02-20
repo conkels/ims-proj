@@ -60,27 +60,27 @@ public static final Logger LOGGER = LogManager.getLogger();
 
 	@Override
 	public int delete() {
-		LOGGER.info("Would you like to delete an Order or Item from your Order? (Please type Order or Item)");
-		String result = utils.getString();
+//		LOGGER.info("Would you like to delete an Order or Item from your Order? (Please type Order or Item)");
+//		String result = utils.getString();
 		
-		if (result.equalsIgnoreCase("Item")) {
-			LOGGER.info("Please enter the id of the order you would like to amend");
+//		if (result.equalsIgnoreCase("Item")) {
+//			LOGGER.info("Please enter the id of the order you would like to amend");
+//			Long order_id = utils.getLong();
+			LOGGER.info("Please enter the id of the order you would like to delete");
 			Long order_id = utils.getLong();
-			LOGGER.info("Please enter the id of the item you would like to delete");
-			Long item_id = utils.getLong();
-			LOGGER.info("Item deleted from Order");
-			return orderDAO.delete(item_id);
-			
-		} else if (result.equalsIgnoreCase("Order")){
-			
-			LOGGER.info("Please enter the ID of the order you would like to delete");
-			Long order_id = utils.getLong();
-			LOGGER.info("Order deleted");
-			return orderDAO.deleteItem(order_id);
-		
+			LOGGER.info("order deleted");
+			return orderDAO.delete(order_id);
+//			
+//		} else if (result.equalsIgnoreCase("Order")){
+//			
+//			LOGGER.info("Please enter the ID of the order you would like to delete");
+//			Long order_id = utils.getLong();
+//			LOGGER.info("Order deleted");
+//			return orderDAO.deleteItem(order_id);
+//		
 
-		}
-		return 0;
+//		}
+//		return 0;
 //		LOGGER.info("Please enter the id of the order you would like to delete");
 //		Long orderId = utils.getLong();
 //		LOGGER.info("order deleted");
