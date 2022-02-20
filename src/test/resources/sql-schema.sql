@@ -40,4 +40,3 @@ JOIN orders_items oi ON o.order_id = oi.order_id)
 JOIN items i ON oi.item_id = i.item_id)
 GROUP BY o.order_id
 ORDER BY o.order_id;
-
