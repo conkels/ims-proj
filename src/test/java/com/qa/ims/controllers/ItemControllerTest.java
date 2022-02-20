@@ -36,6 +36,7 @@ public class ItemControllerTest {
 		final Item created = new Item(NAME, PRICE);
 
 		Mockito.when(utils.getString()).thenReturn(NAME);
+		Mockito.when(utils.getDouble()).thenReturn(PRICE);
 		Mockito.when(dao.create(created)).thenReturn(created);
 
 		assertEquals(created, controller.create());
