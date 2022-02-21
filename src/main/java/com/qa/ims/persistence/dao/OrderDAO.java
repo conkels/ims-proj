@@ -79,8 +79,8 @@ public static final Logger LOGGER = LogManager.getLogger();
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
 						.prepareStatement("INSERT INTO orders(id, item_id, qty, cost) VALUES (?, ?, ?, ?)");) {
-			statement.setLong(1, order.getCustId());
-			statement.setLong(2, order.getItemId());
+			statement.setLong(1, order.getItemId());
+			statement.setLong(2, order.getCustId());
 			statement.setLong(3, order.getQty());
 			statement.setDouble(4, 0.0);
 			statement.executeUpdate();

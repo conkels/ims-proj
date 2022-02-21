@@ -33,10 +33,10 @@ public static final Logger LOGGER = LogManager.getLogger();
 
 	@Override
 	public Order create() {
-		LOGGER.info("Please enter the customer id");
-		Long customerId = utils.getLong();
 		LOGGER.info("Please enter the item id");
 		Long itemId = utils.getLong();
+		LOGGER.info("Please enter the customer id");
+		Long customerId = utils.getLong();
 		LOGGER.info("Please enter the qty");
 		Long qty = utils.getLong();
 		Order order = orderDAO.create(new Order(customerId, itemId, qty));
