@@ -1,4 +1,5 @@
 Coverage: 72.5% - tests for the data access objects of items and orders are failing although the implementation of the tests was the same as for customers which is passing all tests.
+data access object tests for item and order commented out in order for a build of the program to be made.
 # Project Title
 
 One Paragraph of project description goes here
