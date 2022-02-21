@@ -1,4 +1,4 @@
-Coverage: 72.5% - tests for the data access objects of items and orders are failing
+Coverage: 72.5% - tests for the data access objects of items and orders are failing although the implementation of the tests was the same as for customers which is passing all tests.
 # Project Title
 
 One Paragraph of project description goes here
