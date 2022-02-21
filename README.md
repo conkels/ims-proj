@@ -1,8 +1,8 @@
-Coverage: 34%
+Coverage: 72.5% - tests for the data access objects of items and orders are failing
 # Project Title
 
 One Paragraph of project description goes here
-In this project I have been tasked with creating an Inventory Management System (IMS) that uses CRUD functionality so a user is able to manipulate data in an SQL database from a command line interface. In this project I have also had to write test cases with an aim of 80% test coverage for my program which is the industry standard.
+In this project I have been tasked with creating an Inventory Management System (IMS) that uses CRUD functionality so a user is able to manipulate data in an SQL database from a command line interface. Unfortunately this program does not allow the feature of adding or deleting items from a single order but orders can be added and deleted to and from one customer. Also, there is an additional functionality of updating any parameter of an order. In this project I have also had to write test cases with an aim of 80% test coverage for my program which is the industry standard.
 
 ## Getting Started
 
@@ -69,8 +69,8 @@ This is an example of using testing using mockito on the customer controller cla
 
 ## Deployment
 
-From the command line, once you fork the repository, change the directory to 'repository-name'\target and run the .jar file using: java -jar ims-0.0.1-jar-with-dependencies.jar 
-Use mvn clean package in 'repository-name' to build out application again.
+From the command line, once you fork the repository, change the directory to \target and run the .jar file using: java -jar ims-0.0.1-jar-with-dependencies.jar 
+Use mvn clean package in the target to build out application again.
 
 ## Built With
 
